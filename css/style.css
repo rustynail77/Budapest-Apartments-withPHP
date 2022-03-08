@@ -1,0 +1,736 @@
+* {
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  position: relative;
+  z-index: -999;
+}
+
+input {
+  font-size: 20px;
+}
+
+.text_area {
+  vertical-align: top;
+  font-size: 22px;
+  width: 60%;
+}
+
+button {
+  font-size: larger;
+  text-align: center;
+  background-color: white;
+  color: black;
+  margin: 10px 10px 30px 10px;
+  border-radius: 5px;
+}
+
+.button {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.title {
+  font-size: calc(16px + 4vw);
+  text-align: center;
+  font-weight: 200;
+  color: rgb(146, 146, 146);
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+.top_container {
+  /* background-size: cover; */
+  background-color: rgb(70, 70, 70, 0.5);
+  padding: 10px;
+  min-height: auto;
+}
+
+.top_container__text {
+  font-size: calc(22px+3vw);
+  text-align: center;
+  color: white;
+}
+
+.main {
+  margin: 2%;
+  border: 1px solid black;
+  background-color: rgb(146, 146, 146);
+}
+
+.grid {
+  justify-content: center;
+  position: relative;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style-type: none;
+  border-radius: 0.5rem;
+  z-index: 0;
+  max-width: 1000px;
+}
+
+.cell {
+  padding: 10px;
+  display: block;
+  width: 18rem;
+  height: 18rem;
+  background-color: hsl(0, 0%, 90%);
+  color: rgb(70, 70, 70);
+  text-align: center;
+  line-height: 1.8rem;
+  font-size: 22px;
+  border: 5px solid rgb(70, 70, 70);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  position: static;
+}
+
+.cell:hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px white;
+  transform: scale(1.05);
+}
+
+.cards_container {
+  justify-content: center;
+  position: relative;
+  display: flex;
+  margin: auto;
+  padding: auto;
+  background-color: black;
+  z-index: -2;
+}
+
+.general_text {
+  font-size: 16px;
+}
+
+.subheading {
+  font-size: 20px;
+  font-weight: bolder;
+  height: 70px;
+}
+
+.nav__container {
+  text-align: center;
+  position: sticky;
+  display: flex;
+}
+
+.nav__text {
+  color: #717171;
+  font-size: calc(12px + 1.5vw);
+  font-weight: 400;
+  list-style-type: none;
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  line-height: 0.4;
+  margin: 0 auto 1vw;
+}
+
+.nav__item:hover {
+  color: brown;
+  cursor: pointer;
+}
+
+.aptsMenu_container {
+  position: absolute;
+  background-color: rgb(70, 70, 70, 0.9);
+  padding-right: 40px;
+  line-height: 35px;
+  margin-top: 10px;
+  margin-left: -100px;
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.aptsMenu_text {
+  justify-items: center;
+  display: none;
+  list-style-type: none;
+  font-size: 20px;
+  color: white;
+  font-weight: 100;
+  z-index: 107;
+}
+
+.aptsMenu_text:hover {
+  color: rgb(184, 184, 184);
+  cursor: pointer;
+}
+
+.aptsMenu:hover .aptsMenu_text {
+  display: block;
+}
+
+.link__remove_underline {
+  text-decoration: none;
+}
+
+.preview {
+  width: 15%;
+  margin-left: 7%;
+  border: 3px solid black;
+  background-color: white;
+}
+
+.main_img_container {
+  display: block;
+  /* position: relative; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 5px;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 100;
+}
+
+.form {
+  margin: 5%;
+}
+
+.contact_text {
+  font-size: 42px;
+}
+
+.form_text {
+  line-height: 2;
+  font-size: 26px;
+  color: white;
+  font-weight: 200;
+}
+
+.aptSelector {
+  font-size: 22px;
+}
+
+.contact__bottom_container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.left_column {
+  width: 60%;
+}
+
+.right_column {
+  display: flex;
+  width: 40%;
+}
+
+.right_column__img {
+  transition: ease-in-out 0.5s;
+}
+
+.right_column__img:hover {
+  transform: scale(1.05);
+}
+
+.right_column__img:hover .back_to_apt_page {
+  visibility: hidden;
+}
+
+.left_column:hover .back_to_apt_page {
+  visibility: visible;
+}
+
+.contact__apt_image {
+  width: 100%;
+  border-radius: 15px;
+  padding: 3px;
+  border: white 2px solid;
+}
+
+.back_to_apt_page {
+  visibility: hidden;
+  position: absolute;
+  background: rgb(146, 146, 146, 0.8);
+  margin: 15px;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.apt_container {
+  display: flex;
+}
+
+.apt_left_column {
+  width: 30%;
+  font-weight: 300;
+  font-size: larger;
+  padding: 40px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  height: min-content;
+  margin-left: 30px;
+}
+
+.apt_right_column {
+  width: 70%;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.form_text_top {
+  text-align: center;
+}
+
+.form_text_top span {
+  padding-right: 30px;
+}
+
+.form_text a:link {
+  color: rgb(70, 70, 70);
+  text-decoration: none;
+}
+
+.submitButton {
+  border-radius: 5px;
+}
+
+.airbnButton {
+  border-radius: 5px;
+  font-size: 26x;
+  color: white;
+  padding: 5%;
+  background-color: rgb(70, 70, 70);
+  margin-top: 10%;
+  transition: ease-in-out 0.5s;
+}
+
+.airbnButton:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+#single_apt_content {
+  color: white;
+  padding: 0 18px;
+  background-color: rgb(70, 70, 70);
+  margin: 10px;
+  padding: 10px 10px 10px 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+#buttons {
+  font-size: larger;
+  text-align: center;
+  color: black;
+  margin: 10px 10px 10px 10px;
+  cursor: pointer;
+}
+
+.header {
+  height: auto;
+  width: 100%;
+  margin: 0;
+  font-size: 30px;
+  text-align: center;
+  background-color: white;
+}
+
+#aptMain {
+  background-color: rgb(146, 146, 146);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 25px;
+  font-weight: 100;
+}
+
+/* photo slider */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  display: flex;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  margin: auto;
+}
+
+.sliderImgStyle {
+  width: 100%;
+  max-height: 75vh;
+  border-radius: 5px;
+}
+
+.captionTextContainer {
+  left: 0;
+  position: relative;
+  bottom: 8px;
+  width: auto;
+  text-align: center;
+  transition: 0.6s ease-in-out;
+  margin: auto;
+}
+
+/* Caption text */
+.captionText {
+  position: relative;
+  width: auto;
+  padding: 8px 12px;
+  color: #f2f2f2;
+  font-size: 18px;
+  transition: ease-in-out 1s;
+}
+
+.captionText:hover {
+  transform: scale(1.2);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.prev {
+  left: 2%;
+  border-radius: 13px 0 0 13px;
+}
+.next {
+  right: 2%;
+  border-radius: 0 13px 13px 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.thankYou {
+  font-size: 24px;
+  color: rgb(70, 70, 70);
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  padding: 30px;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.footer {
+  height: 100px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  #single_apt_content {
+    color: white;
+    padding: 1%;
+    background-color: rgb(70, 70, 70);
+    margin: 5px;
+    /* padding: 10px 10px 10px 10px; */
+    border: 2px solid black;
+    border-radius: 20px;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 8vw;
+  }
+  .apt_right_column {
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    z-index: 0;
+  }
+
+  .apt_left_column {
+    width: 100%;
+    font-weight: 300;
+    font-size: 6vw;
+    padding: 0 3%;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    height: fit-content;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    text-justify: center;
+  }
+
+  .apt_container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .mySlides {
+    margin: 0;
+  }
+
+  .sliderImgStyle {
+    width: 100%;
+    max-height: 100%;
+  }
+
+  .aptsMenu_container {
+    z-index: 999;
+    padding-right: 32px;
+    margin-right: -30vw;
+    width: 90vw;
+    position: relative;
+  }
+
+  .aptsMenu_text {
+    justify-items: center;
+    display: none;
+    list-style-type: none;
+    font-size: 17px;
+    color: white;
+    font-weight: 300;
+    z-index: 107;
+    line-height: 3;
+    border-bottom: dotted 1px white;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background-color: black;
+  }
+
+  .prev {
+    left: 1%;
+    border-radius: 0 13px 13px 0;
+  }
+
+  .next {
+    right: 1%;
+    border-radius: 13px 0 0 13px;
+  }
+
+  .prev,
+  .next {
+    background-color: black;
+    cursor: pointer;
+    position: fixed;
+    top: 45%;
+    width: auto;
+    margin-top: 0;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+  }
+
+  header {
+    display: block;
+    width: 100vw;
+  }
+  .header {
+    width: 100vw;
+  }
+
+  fieldset {
+    display: flex;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-block-start: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    padding-block-end: 0;
+    min-inline-size: min-content;
+    border-width: 0;
+    flex-direction: column;
+    margin-left: -10px;
+  }
+
+  .form_text_top {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact__bottom_container {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  legend {
+    display: block;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    border-width: 0;
+    border-style: none;
+    border-color: rgb(70, 70, 70, 0);
+    border-image: none;
+    width: 90vw;
+    margin-right: 0%;
+  }
+
+  .top_container {
+    background-color: rgb(70, 70, 70, 0.5);
+    padding: 5px;
+    width: 100vw;
+  }
+
+  .contact__apt_image {
+    width: 90vw;
+    border-radius: 15px;
+    padding: 1px;
+    border: white 2px solid;
+    margin-right: 0px;
+  }
+
+  .aptSelector {
+    width: 60vw;
+  }
+
+  input[type="button" i] {
+    appearance: auto;
+    user-select: none;
+    white-space: pre;
+    align-items: center;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    color: -internal-light-dark(black, white);
+    padding: 10px;
+    margin-bottom: 5px;
+    border-width: 0;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+  }
+
+  #subBut {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    justify-self: center;
+    margin-left: 25%;
+    margin-bottom: 2%;
+    height: 6vh;
+  }
+
+  .thankYou {
+    left: 10%;
+  }
+
+  .footer {
+    height: 100px;
+    text-align: center;
+    bottom: 1vh;
+    width: 100vw;
+  }
+
+  .left_column {
+    width: 100%;
+  }
+
+  .optionList {
+    font-size: 4vw;
+    width: 10vw;
+  }
+
+  .aptSelector {
+    font-size: 5vw;
+  }
+
+  .airbnButton {
+    padding: 10px;
+    margin-left: 16vw;
+  }
+}

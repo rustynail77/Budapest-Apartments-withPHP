@@ -1,0 +1,81 @@
+<!-- contact page -->
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Work+Sans:wght@100..900&display=swap"
+    rel="stylesheet"
+    />
+    <title>Budapest Rental Apartments site</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+    <script type="module" src="./js/contactus.js" defer></script>
+    <script type="module" src="./js/mainMenu.js"></script>
+    <!-- <script type="module" src="./contactForm.php"></script> -->
+</head>
+
+  <body>
+    <header class="header"><script src="./js/mainMenu.js"></script></header>
+    
+    <section class="top_container">
+        <p class="top_container__text">
+            This site was built with HTML, CSS and Vanilla JS as part of a Web Development portfolio.
+        </p>  
+        <h2 class="heading contact_text">Contact us</h2>
+    
+        <form method="post" name="contactForm" id="contactForm" class="form" action="mailform.php">
+            <div class="form_text"> 
+            
+                <div class="form_text_top">
+                    <span>For inquiries:</span>
+                    <span>Call: <a href="tel:+972506224203">+972-50-6224203</a></span>
+                    <span>Click to text on 
+                        <a href="https://wa.me/972506224203/" target="_blank">
+                            <img src="./images/WhatsApp-Emblem (1).png" height="30px">
+                        </a>
+                    </span>
+                    <span>email: <a href="mailto:atliszt4@gmail.com">atliszt4@gmail.com</a></span> 
+                </div>
+                <br>        
+                <fieldset>
+                    <legend>OR: Fill in the form, press "Submit" and we'll get back to you</legend>
+                    
+                    <div class="contact__bottom_container">
+                    <div class="left_column">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname" placeholder="First Name" required><br>
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" placeholder="Last Name">
+                        <br>
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" autocomplete="off" placeholder="someone@example.com" required>
+                        <br>
+                        <label for="apt">Interested in:</label>
+                        <select id="apt" class="aptSelector" name="apt" placeholder="Select Apartment">
+                        </select>
+                        <br>
+                        <label for="freetext">Message:</label>
+                        <input type="textarea" autocomplete="off" class="text_area" id="freetext" name="freetext"
+                             rows="2" cols="60">
+                    </div>
+                    <div class="right_column">
+                        <div class="right_column__img"></div>
+                        <div class="back_to_apt_page fade">Click on image<br>to return to apartment page</div>
+                    </div>
+                    </div>
+                    <input id="subBut" name="subBut" type="button" class="submitButton" value="Submit" action="mailform.php"/>
+                </fieldset>
+            </div>
+        </form>
+        <div class="thankYou">
+            <b>Thank you for your inquiry</b>
+            <br>
+            We'll contact you shortly
+            <br><br>
+            <button type="button" class="closeBut">Close</button>
+        </div>
+    </section>
+    <footer class="footer">Copyright 2021 by Liron</footer>
+  </body>
+</html>
